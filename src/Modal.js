@@ -7,6 +7,7 @@ class Modal extends Component {
         data: {}
     }
 
+// API call to fetch detailed description of movies/series
     componentDidUpdate = async (prevProps) => {
         if (this.props.isOpen && this.props.imdbID !== prevProps.imdbID) {
             const rawResponse = await fetch(`http://www.omdbapi.com/?apikey=c7e2df9&i=${this.props.imdbID}`);
@@ -17,6 +18,7 @@ class Modal extends Component {
         }
     }
 
+   // Rendering the complete description of movies/series
     render() {
         if (this.props.isOpen) {
             const data = this.state.data;

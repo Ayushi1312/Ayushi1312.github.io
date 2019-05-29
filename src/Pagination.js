@@ -34,6 +34,8 @@ class Pagination extends React.Component {
         this.props.fetchData(pageNumber);
     }
 
+    
+  // Rendering the pagination component
     render() {
         const pageNumbers = [];
         if (this.props.fetchData.total !== null) {

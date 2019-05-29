@@ -12,7 +12,7 @@ class App extends React.Component {
             <Table data={this.state.data} fetchData={this.fetchData} total={this.state.total}/>
         );
 
-
+// API call to fetch table data
     }
     componentDidMount() {
         this.fetchData(1);
